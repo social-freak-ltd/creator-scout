@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/sf/:__p*", "destination": "/api/sf" },
+    { "source": "/ai/judge", "destination": "/api/judge" },
+    { "source": "/img", "destination": "/api/img" }
+  ],
+  "functions": {
+    "api/*.mjs": { "maxDuration": 60 }
+  }
+}
